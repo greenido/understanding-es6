@@ -5,8 +5,8 @@
 function foo(){
     const i = 1;
     
-    var bar = i; // 1
-    var i = 2;  // error
+    var bar = i; // 1 - you can asign the value of the const to another variable
+    var i = 2;  // error because we defined 'i' as const at line 6
 }
 
 function fooTwo(){
@@ -14,6 +14,6 @@ function fooTwo(){
         nestedProperty: 1
     };
     
-    object = 2; // error
-    object.nestedProperty = 2;  // no error
+    object = 2; // error because we defined object as const at linr 13
+    object.nestedProperty = 2;  // no error - you can define the nested value of a const object. But please be careful.
 }
